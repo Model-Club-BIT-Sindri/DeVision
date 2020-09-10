@@ -25,20 +25,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Mongoose Model config
-var blogSchema = new mongoose.Schema({
-  title: String,
-  image: String,
-  body: String,
-  created: {type: Date , default: Date.now}
-});
+// var blogSchema = new mongoose.Schema({
+//   title: String,
+//   image: String,
+//   body: String,
+//   created: {type: Date , default: Date.now}
+// });
 
-var Blog = mongoose.model("Blog", blogSchema);
+// var Blog = mongoose.model("Blog", blogSchema);
 
-Blog.create({
-  title:"Test Blog",
-  image: "https://templatemo.com/templates/templatemo_520_highway/img/portfolio_item_4.png",
-  body: "lorem uhfjsjklsxhlsvkbcl"
-});
+// Blog.create({
+//   title:"Test Blog",
+//   image: "https://templatemo.com/templates/templatemo_520_highway/img/portfolio_item_4.png",
+//   body: "lorem uhfjsjklsxhlsvkbcl"
+// });
 
 //restflu routes
 

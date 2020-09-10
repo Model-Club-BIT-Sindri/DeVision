@@ -21,14 +21,14 @@ https://templatemo.com/tm-520-highway
         <link rel="stylesheet" href="/stylesheets/fontAwesome.css">
         <link rel="stylesheet" href="/stylesheets/light-box.css">
         <link rel="stylesheet" href="/stylesheets/templatemo-style.css">
-
+        <script src="https://kit.fontawesome.com/23cd0e260d.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
         <script src="/javascripts/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
 
 <body>
-
+  
     <nav>
         <div class="logo">
             <a href="index.html">High<em>way</em></a>
@@ -45,9 +45,12 @@ https://templatemo.com/tm-520-highway
               <h1>Welcome to <em>Highway</em></h1>
               <p>FREE CSS TEMPLATE by templatemo</p>
               <p>Homepage with full-width image gallery</p>
-                <div class="scroll-icon">
+                <!-- <div class="scroll-icon">
+                  <i class="fas fa-plus-circle"></i>
                     <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="img/scroll-icon.png" alt=""></a>
-                </div>    
+                    <button type="button" class="btn btn-light">Dark</button>  
+                </div>     -->
+                <a href=""><img src="img/scroll-icon.png" alt=""></a>
             </div>
         </div>
         <video autoplay="" loop="" muted>
@@ -55,8 +58,30 @@ https://templatemo.com/tm-520-highway
         </video>
     </div>
 
-
+   
     <div class="full-screen-portfolio" id="portfolio">
+      <div class="container-fluid">
+          <% blogs.forEach(function(blog){ %>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="<%= blog.image %>" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1><%= blog.title %> <em>squid</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="<%= blog.image %>">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+ 
+    <!-- <div class="full-screen-portfolio" id="portfolio">
         <div class="container-fluid">
             <div class="col-md-4 col-sm-6">
                 <div class="portfolio-item">
@@ -194,7 +219,7 @@ https://templatemo.com/tm-520-highway
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <footer>
