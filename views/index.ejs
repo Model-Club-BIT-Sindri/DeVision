@@ -50,7 +50,7 @@ https://templatemo.com/tm-520-highway
                     <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="img/scroll-icon.png" alt=""></a>
                     <button type="button" class="btn btn-light">Dark</button>  
                 </div>     -->
-                <a href=""><img src="img/scroll-icon.png" alt=""></a>
+                <a href="/blogs/new"><img src="img/scroll-icon.png" alt=""></a>
             </div>
         </div>
         <video autoplay="" loop="" muted>
@@ -59,26 +59,28 @@ https://templatemo.com/tm-520-highway
     </div>
 
    
-    <div class="full-screen-portfolio" id="portfolio">
-      <div class="container-fluid">
-          <% blogs.forEach(function(blog){ %>
-            <div class="col-md-4 col-sm-6">
-                <div class="portfolio-item">
-                    <a href="<%= blog.image %>" data-lightbox="image-1"><div class="thumb">
-                        <div class="hover-effect">
-                            <div class="hover-content">
-                                <h1><%= blog.title %> <em>squid</em></h1>
-                                <p>Awesome Subtittle Goes Here</p>
+    <div class="grid-portfolio" id="portfolio">
+        <div class="container">
+            <div class="row">
+            <% blogs.forEach(function(blog){ %>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="<%= blog.image %>" data-lightbox="image-1"><div class="thumb">
+                            <div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1><%= blog.title %> <em>squid</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="image">
-                            <img src="<%= blog.image %>">
-                        </div>
-                    </div></a>
+                            <div class="image">
+                                <img src="<%= blog.image %>">
+                            </div>
+                        </div></a>
+                    </div>
                 </div>
+                <% }) %>
             </div>
-            <% }) %>
-          </div>
+        </div>
         </div>
  
     <!-- <div class="full-screen-portfolio" id="portfolio">

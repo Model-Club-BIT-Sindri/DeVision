@@ -16,7 +16,7 @@ var Blog = mongoose.model("Blog", blogSchema);
 
 /* GET home page. */
 router.get('/', function(req, res ){
-  res.render('index')
+  res.redirect("/blogs");
 })
 
 router.get('/blogs', function(req, res, next) {
@@ -27,6 +27,11 @@ router.get('/blogs', function(req, res, next) {
       res.render('index', { blogs: blogs });
     }
   });
+});
+
+router.get("/blogs/new", function(req, res) {
+  //just render the same form over and over - easiest route
+  res.render("new"); 
 });
 
 module.exports = router;
