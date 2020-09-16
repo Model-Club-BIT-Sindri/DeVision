@@ -3,7 +3,7 @@ var router = express.Router();
 var bodyParser   = require("body-parser");
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://modelclub2k19:model2k19club@cluster0.t0m2j.mongodb.net/Blog?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://modelclub2k19:model2k19club@cluster0-shard-00-00.t0m2j.mongodb.net:27017,cluster0-shard-00-01.t0m2j.mongodb.net:27017,cluster0-shard-00-02.t0m2j.mongodb.net:27017/Blog?ssl=true&replicaSet=atlas-10yvmo-shard-0&authSource=admin&retryWrites=true&w=majority', {
   useNewUrlParser: true , 
   useUnifiedTopology: true
 }).then(()=>{

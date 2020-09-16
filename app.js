@@ -12,15 +12,16 @@ var usersRouter = require('./routes/users');
 var mongoose = require('mongoose');
 
 var app = express();
+// mongodb+srv://modelclub2k19:model2k19club@cluster0.t0m2j.mongodb.net/Blog?retryWrites=true&w=majority
 
-mongoose.connect('mongodb+srv://modelclub2k19:model2k19club@cluster0.t0m2j.mongodb.net/Blog?retryWrites=true&w=majority', {
-  useNewUrlParser: true , 
-  useUnifiedTopology: true
-}).then(()=>{
-  console.log("Connection.db! Successful");
-}).catch(err => {
-  console.log('ERROR:', err.message);
-});
+// mongoose.connect('mongodb://modelclub2k19:model2k19club@cluster0-shard-00-00.t0m2j.mongodb.net:27017,cluster0-shard-00-01.t0m2j.mongodb.net:27017,cluster0-shard-00-02.t0m2j.mongodb.net:27017/Blog?ssl=true&replicaSet=atlas-10yvmo-shard-0&authSource=admin&retryWrites=true&w=majority', {
+//   useNewUrlParser: true , 
+//   useUnifiedTopology: true
+// }).then(()=>{
+//   console.log("Connection.db! Successful");
+// }).catch(err => {
+//   console.log('ERROR:', err.message);
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
