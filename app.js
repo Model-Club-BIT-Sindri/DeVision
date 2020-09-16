@@ -4,6 +4,7 @@ var path = require('path');
 var bodyParser = require("body-parser");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const port = 3000;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -68,8 +69,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, function() { 
-  console.log('Server listening on port 3000'); 
-});
+app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
 
 module.exports = app;
