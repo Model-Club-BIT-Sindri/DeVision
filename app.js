@@ -4,7 +4,14 @@ var path = require('path');
 var bodyParser = require("body-parser");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+//  port (as described above) and host are both wrong
+const host = 'localhost';
 const port = 3000;
+
+// use alternate localhost and the port Heroku assigns to $PORT
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -69,6 +76,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
+app.listen(port, host, function() {
+  console.log("Server started.......");
+});
 
 module.exports = app;
