@@ -11,7 +11,14 @@ var mongoose = require('mongoose');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/restful_blog_app', {useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://modelclub2k19:model2k19club@cluster0.t0m2j.mongodb.net/Blog?retryWrites=true&w=majority', {
+  useNewUrlParser: true , 
+  useUnifiedTopology: true
+}).then(()=>{
+  console.log("Connection.db! Successful");
+}).catch(err => {
+  console.log('ERROR:', err.message);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,7 +31,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Mongoose Model config
+// //Mongoose Model config
 // var blogSchema = new mongoose.Schema({
 //   title: String,
 //   image: String,
