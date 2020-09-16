@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var port = process.env.PORT || 8080;
+// var port = process.env.PORT || 8080;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -70,8 +70,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(port, function() {
-  console.log('Our app is running on http://localhost:' + port);
-});
+// app.listen(port, function() {
+//   console.log('Our app is running on http://localhost:' + port);
+// });
 
 module.exports = app;
