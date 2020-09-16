@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Blog.create({
 //   title:"Test Blog",
-//   image: "https://templatemo.com/templates/templatemo_520_highway/img/portfolio_item_4.png",
+//   image: "https://drive.google.com/file/d/1aX67_EtDIegixeMVI1NUGufjKqMlL1Nc/view?usp=sharing",
 //   body: "lorem uhfjsjklsxhlsvkbcl"
 // });
 
