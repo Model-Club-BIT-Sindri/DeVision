@@ -31,7 +31,9 @@ https://templatemo.com/tm-520-highway
   
     <nav>
         <div class="logo">
-            <a href="/bologs"><img src="img/clogo.png" style="width:60px;height:60px"></a>
+            <a href="/blogs"><img src="/img/bitlogo.png" style="height:70px"></a>
+            <!-- <div class="vl" style="border-left: 6px solid green;height: 50px;"></div> -->
+            <a href="/blogs"><img src="/img/clogo.png" style="width:60px;height:60px"></a>
         </div>
         <div class="menu-icon">
         <span></span>
@@ -43,6 +45,9 @@ https://templatemo.com/tm-520-highway
         <div class="video-content">
             <div class="inner">
               <h1>Welcome to <em>De'Vision</em></h1>
+              <br><br><br><br><br><br>
+              <!-- <a href="#" class="btn btn-outline-primary" role="button">Link Button</a> -->
+              <button type="button" class="btn btn-outline-primary"><a href="/blogs" style="color: black;" >Register With D2C <i class="fas fa-sign-in-alt"></i></a></button>
               <br>
                 <div class="scroll-icon">
                     <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="img/scroll-icon.png" alt=""></a>  
@@ -68,8 +73,8 @@ https://templatemo.com/tm-520-highway
                         <a href="<%= blog.image %>" data-lightbox="image-1"><div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
-                                    <h1><%= blog.title %> <em>squid</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
+                                    <h1><%= blog.title %> <em>'Vision</em></h1>
+                                    <p><%= blog.body %></p>
                                 </div>
                             </div>
                             <div class="image">
@@ -80,66 +85,40 @@ https://templatemo.com/tm-520-highway
                 </div>
                 <% }) %>
             </div>
+        </div></div>
+
+      <div class="container">
+        <div class="text-content">
+          <h2 style="color: black; text-align: center;">Our Sponsors!</h2>
         </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="portfolio-item">
+              <img src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/v1411656498/qu5coyqozddz2oqjd1g0.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="portfolio-item">
+              <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQEPlrHmzQR7pQ/company-logo_200_200/0?e=2159024400&v=beta&t=VgfYK51PKZ_xqkXAkhZcY5svSFYs-o3BK_SRUpR7Jn0" alt="">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="portfolio-item">
+              <img src="https://i.pcmag.com/imagery/reviews/04BeuaBbm49onPbM1tX7ENj-6..1569482810.png" alt="">
+            </div>
+          </div>
         </div>
+      </div>
      
     <footer>
         <div class="container-fluid">
             <div class="col-md-12">
-                <p>Designed by &copy; Imran 
+                <p>Designed by &copy; <a href="https://www.linkedin.com/in/imran-nazir-692abb112/">Imran</a> </p> 
     
     <!-- | Designed by TemplateMo</p> -->
             </div>
         </div>
     </footer>
-
-
-      <!-- Modal button -->
-    <div class="popup-icon">
-      <button id="modBtn" class="modal-btn"><img src="img/contact-icon.png" alt=""></button>
-    </div>  
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <!-- Modal Content -->
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h3 class="header-title">Say hello to <em>Highway</em></h3>
-          <div class="close-btn"><img src="img/close_contact.png" alt=""></div>    
-        </div>
-        <!-- Modal Body -->
-        <div class="modal-body">
-          <div class="col-md-6 col-md-offset-3">
-            <form id="contact" action="" method="post">
-                <div class="row">
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="btn">Send Message Now</button>
-                      </fieldset>
-                    </div>
-                </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     
 
     <section class="overlay-menu">
@@ -151,7 +130,7 @@ https://templatemo.com/tm-520-highway
                       <a href="/blogs">Home</a>
                   </li>
                   <li>
-                      <a href="single-post.html">Contact Us</a>
+                      <a href="/blogs/contact">Contact Us</a>
                   </li>
               </ul>
               <p>Your Vision Designed</p>
