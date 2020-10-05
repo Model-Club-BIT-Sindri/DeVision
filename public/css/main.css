@@ -583,6 +583,12 @@ textarea.input100 {
   animation: beatbtn 0.9s ease-in-out infinite;
 }
 
+.meracss{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 @keyframes beatbtn {
   0% {
